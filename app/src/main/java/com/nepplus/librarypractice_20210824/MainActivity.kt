@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermissionActivity
 import com.gun0912.tedpermission.TedPermissionBase
@@ -52,6 +53,10 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
 
+//        최근 활동 사진을 인터넷에서 곧바로 다운받아 앱에서 보여주기
+        Glide.with(mContext)
+            .load("https://blendswap.com/static/blendImages/2014/11/image76321/big_f638e0bdd19763e38dedaf43b867f067.jpg")
+            .into(recentImg)
     }
 
 }
